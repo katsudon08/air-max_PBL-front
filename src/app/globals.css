@@ -109,6 +109,14 @@
     @apply flex justify-center items-center
 }
 
+.between-vertical {
+    @apply flex flex-col justify-between items-center
+}
+
+.between-horizontal {
+    @apply flex flex-row justify-between items-center
+}
+
 .vertical {
     @apply flex flex-col justify-between items-center
 }
