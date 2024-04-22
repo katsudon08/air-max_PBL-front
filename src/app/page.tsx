@@ -8,14 +8,9 @@ import { useState } from "react"
 import { RoomDetail } from "@/components/modal-window/RoomDetail"
 import { RoomCreate } from "@/components/modal-window/RoomCreate"
 import { TextField } from "@/components/input/TextField"
+import { Room } from "@/types/room"
 
 export default function Home() {
-    interface Room {
-        room_name: string;
-        room_id: string;
-        room_description: string;
-    }
-
     const [rooms, setRooms] = useState<Room[]>([])
     const [roomName, setRoomName] = useState<string>("")
     const [roomID, setRoomID] = useState<string>("")
