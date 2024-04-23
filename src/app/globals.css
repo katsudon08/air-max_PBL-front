@@ -2,17 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+/* screen */
+
 .h-screen {
   height: 100vh;
   height: 100dvh;
 }
 
+/* humberger menu */
+
 .bm-overlay {
   @apply hidden
 }
 
+/* バーガーメニューのボタン */
+.bm-burger-button {
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  right: 20px;/* 右にしたい場合はright,左にしたい場合はleft */
+  top: 20px;
+}
+
+/* バーガーメニューのボタンの線 */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* バーガーメニューのボタンの線（ホバー時）*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* 閉じるボタン(Xの周辺） */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* 閉じるボタンのX */
 .bm-cross {
-    @apply hidden
+  @apply bg-black
+}
+
+/*バーガーメニューのwrapper*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* バーガーメニューのwrapper */
+.bm-menu {
+  background: #373a47;
+  font-size: 1.15em;
+}
+
+/* bubble or elasticの際に必要 */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* アイテムリストのwrapper */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* アイテム */
+.bm-item {
+  display: inline-block;
+  height: 50px;
+  @apply bg-slate-300
+}
+
+.humberger-item {
+  @apply w-full paper card-sm p-2 text-black text-center select
 }
 
 /* color */

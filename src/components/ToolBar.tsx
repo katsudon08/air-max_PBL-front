@@ -1,10 +1,10 @@
 import React from 'react'
-import { HumbergerMenuButton } from './button/HumbergerMenuButton'
+import HumbergerMenu from './HumbergerMenu'
 
 export const ToolBar = () => {
     return (
-        <div className="absolute top-0 w-full blue flex flex-row justify-end items-center px-4">
-            <HumbergerMenuButton />
+        <div className="absolute top-0 w-full flex flex-row justify-end items-center px-4">
+            <HumbergerMenu />
         </div>
     )
 }
