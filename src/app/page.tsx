@@ -8,8 +8,8 @@ import { useState } from "react"
 import { RoomDetail } from "@/components/modal-window/RoomDetail"
 import { RoomCreate } from "@/components/modal-window/RoomCreate"
 import { TextField } from "@/components/input/TextField"
-
 import { Room } from "@/types/room"
+import { HumbergerMenuButton } from "@/components/button/HumbergerMenuButton"
 
 export default function Home() {
     const [rooms, setRooms] = useState<Room[]>([])
@@ -66,6 +66,7 @@ export default function Home() {
 
     return (
         <main className="background-paper center">
+            <HumbergerMenuButton />
             <div className="content-lg vertical-startline space-y-3 overflow-y-scroll scrollbar-hidden">
                 {rooms.map((v: Room, i) => (
                     <Paper size={SIZE.FIT} handleClick={handlePaperClick} key={i}>
