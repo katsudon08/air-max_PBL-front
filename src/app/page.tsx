@@ -8,6 +8,7 @@ import { useState } from "react"
 import { RoomDetail } from "@/components/modal-window/RoomDetail"
 import { RoomCreate } from "@/components/modal-window/RoomCreate"
 import { TextField } from "@/components/input/TextField"
+
 import { Room } from "@/types/room"
 
 export default function Home() {
@@ -78,9 +79,7 @@ export default function Home() {
             </div>
             <CircleAddButton handleClick={handleCircleAddButtonClick} />
             {isRoomDetailDisplay &&
-                <RoomDetail handleClick={closeIsRoomDetailDisplay}>
-                    example data
-                </RoomDetail>
+                <RoomDetail data={rooms} handleClick={closeIsRoomDetailDisplay} />
             }
             {isRoomCreateDisplay &&
                 <RoomCreate handleClick={closeIsRoomCreateDisplay}>

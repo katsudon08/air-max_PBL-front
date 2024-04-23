@@ -1,24 +1,21 @@
-import React, { ReactNode } from 'react'
-import { ArrowButton } from '../button/circle/ArrowButton'
-import { DIRECTIONS } from '@/types/ArrowButton/directions'
+import { Room } from '@/types/room'
 import { ModalWindow } from '../ModalWindow'
 import { SIZE } from '@/types/size'
-import { InsideModalWindow } from '../InsideModalWindow'
+import AwesomeSlider from 'react-awesome-slider'
+import "react-awesome-slider/dist/styles.css"
+import 'react-awesome-slider/dist/custom-animations/cube-animation.css'
 
-export const RoomDetail = ({ children, handleClick }: { children: ReactNode, handleClick: () => void }) => {
+
+export const RoomDetail = ({ data, handleClick }: { data: Room[], handleClick: () => void }) => {
     return (
         <ModalWindow size={SIZE.MEDIUM} handleClick={handleClick}>
-            <InsideModalWindow handleClick={handleClick} >
-                <div className='absolute top-1/2 -left-3 -translate-y-6 -translate-x-5'>
-                    <ArrowButton direction={DIRECTIONS.LEFT} />
-                </div>
-                <div className='absolute top-1/2 -right-3 -translate-y-6 translate-x-5'>
-                    <ArrowButton direction={DIRECTIONS.RIGHT} />
-                </div>
-                <div className='content-lg center p-3'>
-                    {children}
-                </div>
-            </InsideModalWindow>
+            <AwesomeSlider className="content-full" animation='cubeAnimation'>
+                {data.map((_, i) => (
+                    <div className="content-full blue p-6 center">
+                        {(i+1)}
+                    </div>
+                ))}
+            </AwesomeSlider>
         </ModalWindow>
     )
 }
