@@ -1,5 +1,5 @@
 export const enum PAGE_URLS {
-    HOME = "home",
+    HOME = "",
     MONITOR = "monitor",
     INFORMATION = "info"
 }

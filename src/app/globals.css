@@ -75,7 +75,7 @@
 }
 
 .humberger-item {
-  @apply w-full paper card-sm p-2 text-black text-center select
+  @apply w-full paper card-sm p-2 text-black text-center inline-block select
 }
 
 /* color */
