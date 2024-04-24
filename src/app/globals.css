@@ -20,8 +20,8 @@
   position: fixed;
   width: 28px;
   height: 28px;
-  right: 20px;/* 右にしたい場合はright,左にしたい場合はleft */
-  top: 20px;
+  right: 10px;/* 右にしたい場合はright,左にしたい場合はleft */
+  top: 10px;
 }
 
 /* バーガーメニューのボタンの線 */
@@ -194,6 +194,10 @@
 
 .horizontal {
   @apply flex flex-row justify-between items-center;
+}
+
+.responsive {
+  @apply flex flex-col md:flex-row justify-between items-center
 }
 
 .vertical-startline {
