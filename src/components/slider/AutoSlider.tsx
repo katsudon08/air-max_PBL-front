@@ -1,5 +1,7 @@
+"use client"
+
 import React from 'react'
-import { Splide, SplideSlide } from '@splidejs/react-splide'
+import { Splide, SplideSlide } from 'splide-nextjs/react-splide'
 import "@splidejs/react-splide/css"
 
 export const AutoSlider = ({ data }: { data: string[] }) => {
