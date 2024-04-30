@@ -1,14 +1,13 @@
 "use client"
 
 import { ToolBar } from '@/components/ToolBar';
-import { AutoSlider } from '@/components/slider/AutoSlider';
-import { Room } from '@/types/room';
+import dynamic from 'next/dynamic';
+
+const AutoSliderNoSSR = dynamic(() => import('@/components/slider/AutoSlider'), {
+    ssr: false
+})
 
 export default function Monitor() {
-    const rooms: Room[] = [
-        { room_name: "", room_id: "", room_description: "" }
-    ]
-
     const data: string[] = [
         "aaa", "bbb", "ccc"
     ]
@@ -16,7 +15,7 @@ export default function Monitor() {
     return (
         <div className='background-paper center'>
             <ToolBar />
-            <AutoSlider data={data}/>
+            <AutoSliderNoSSR data={data}/>
         </div>
     );
 }

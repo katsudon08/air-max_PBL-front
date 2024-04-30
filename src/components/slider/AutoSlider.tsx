@@ -1,10 +1,10 @@
 "use client"
 
 import React from 'react'
-import { Splide, SplideSlide } from 'splide-nextjs/react-splide'
-import "@splidejs/react-splide/css"
+import { Splide, SplideSlide } from "splide-nextjs/react-splide";
+import 'splide-nextjs/splide/dist/css/themes/splide-default.min.css';
 
-export const AutoSlider = ({ data }: { data: string[] }) => {
+const AutoSlider = ({ data }: { data: string[] }) => {
     return (
         <Splide className='content-full'
             options={{
@@ -24,3 +24,5 @@ export const AutoSlider = ({ data }: { data: string[] }) => {
         </Splide>
     )
 }
+
+export default AutoSlider
