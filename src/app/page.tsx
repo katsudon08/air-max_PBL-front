@@ -9,6 +9,7 @@ import { RoomDetail } from "@/components/modal-window/RoomDetail"
 import { RoomCreate } from "@/components/modal-window/RoomCreate"
 import { TextField } from "@/components/input/TextField"
 import { Room } from "@/types/room"
+import { ToolBar } from "@/components/ToolBar"
 
 export default function Home() {
     const [rooms, setRooms] = useState<Room[]>([])
@@ -65,6 +66,7 @@ export default function Home() {
 
     return (
         <main className="background-paper center">
+            <ToolBar />
             <div className="content-lg vertical-startline space-y-3 overflow-y-scroll scrollbar-hidden">
                 {rooms.map((v: Room, i) => (
                     <Paper size={SIZE.FIT} handleClick={handlePaperClick} key={i}>
@@ -78,9 +80,7 @@ export default function Home() {
             </div>
             <CircleAddButton handleClick={handleCircleAddButtonClick} />
             {isRoomDetailDisplay &&
-                <RoomDetail handleClick={closeIsRoomDetailDisplay}>
-                    example data
-                </RoomDetail>
+                <RoomDetail data={rooms} handleClick={closeIsRoomDetailDisplay} />
             }
             {isRoomCreateDisplay &&
                 <RoomCreate handleClick={closeIsRoomCreateDisplay}>
