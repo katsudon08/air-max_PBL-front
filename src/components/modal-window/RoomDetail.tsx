@@ -8,7 +8,7 @@ export const RoomDetail = ({ data, handleClick }: { data: Room[], handleClick: (
         <ModalWindow size={SIZE.MEDIUM} handleClick={handleClick}>
             <Slider>
                 {data.map((_, i) => (
-                    <div className="content-full blue p-6 center">
+                    <div className="content-full blue p-6 center" key={i}>
                         {(i + 1)}
                     </div>
                 ))}
