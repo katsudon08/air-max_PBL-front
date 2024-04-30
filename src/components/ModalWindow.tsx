@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react'
 import { Background } from './Background'
-import { CancelButton } from './button/circle/CancelButton'
 import { SIZE } from '@/types/size'
 
 export const ModalWindow = ({ children, size, handleClick }: { children: ReactNode, size: SIZE, handleClick: () => void }) => {
@@ -19,6 +18,15 @@ export const ModalWindow = ({ children, size, handleClick }: { children: ReactNo
                 <>
                     <Background handleClick={handleClick} />
                     <div className='absolute content-md bg-white card-md'>
+                        {children}
+                    </div>
+                </>
+            )
+        case SIZE.MEDIUM_SLIDER:
+            return (
+                <>
+                    <Background handleClick={handleClick} />
+                    <div className='absolute content-md-slider bg-white card-md'>
                         {children}
                     </div>
                 </>
